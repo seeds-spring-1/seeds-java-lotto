@@ -25,21 +25,21 @@ public class LottoAwardDecider {
     public void checkPlayerLottoScoreByWinningLotto(Lotto playerLotto, WinningLotto winningLotto) {
         lottoScore = new LottoScore();
 
-        for(Integer number : playerLotto.get()) {
+        for (Integer number : playerLotto.get()) {
             boolean isEqualNumberExist = false;
 
-            for(Integer winningNumber : winningLotto.get()) {
+            for (Integer winningNumber : winningLotto.get()) {
                 if (number.equals(winningNumber)) {
                     isEqualNumberExist = true;
                     break;
                 }
             }
 
-            if(isEqualNumberExist) {
+            if (isEqualNumberExist) {
                 lottoScore.increaseScore();
             }
 
-            if (number.equals(winningLotto.getSpecialNumber())){
+            if (number.equals(winningLotto.getSpecialNumber())) {
                 lottoScore.earnBonus();
             }
         }
