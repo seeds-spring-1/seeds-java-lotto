@@ -27,7 +27,7 @@ public class Application {
             );
 
             // print award and profit rate
-            LottoAwardPresenter lottoAwardPresenter = new LottoAwardPresenter(lottoAward);
+            LottoAwardPresenter lottoAwardPresenter = new LottoAwardPresenter();
             lottoAwardPresenter.printAwardAndProfitRate(lottoAward);
         }
         catch(IllegalArgumentException exception) {
