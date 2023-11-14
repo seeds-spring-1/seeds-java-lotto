@@ -10,7 +10,7 @@ public class Application {
             // generate player's lotto game by input
             Input.inputPlayerCash();
             LottoGenerator lottoGenerator = new LottoGenerator();
-            Application.playerLottoList = lottoGenerator.generateRandomLotto(Input.getPlayerCash());
+            Application.playerLottoList = lottoGenerator.generateRandomLottoListByCash(Input.getPlayerCash());
 
             // print player lotto list
             Application.printPlayerLottoList();
