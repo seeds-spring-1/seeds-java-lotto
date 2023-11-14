@@ -21,7 +21,7 @@ public class LottoScore {
         return score;
     }
 
-    public boolean isEarnBonus() {
+    public boolean hasBonus() {
         return bonus;
     }
 }
