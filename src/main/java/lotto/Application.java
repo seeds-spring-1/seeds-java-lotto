@@ -4,8 +4,9 @@ import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
-        Lotto winningLotto = null;
         try {
+            Lotto winningLotto = null;
+
             // get input
             Input.run();
             winningLotto = new Lotto(Input.getWinningLottoNumber());
