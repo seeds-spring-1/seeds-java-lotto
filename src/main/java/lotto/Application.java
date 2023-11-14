@@ -3,17 +3,17 @@ package lotto;
 import java.util.List;
 
 public class Application {
-    private static List<Lotto> PlayerLottoList;
+    private static List<Lotto> playerLottoList;
 
     public static void main(String[] args) {
         try {
             // generate player's lotto game by input
-            Input.InputPlayerCash();
+            Input.inputPlayerCash();
             LottoGenerator lottoGenerator = new LottoGenerator();
-            Application.PlayerLottoList = lottoGenerator.generateRandomLotto(Input.getPlayerCash());
+            Application.playerLottoList = lottoGenerator.generateRandomLotto(Input.getPlayerCash());
 
             // print player lotto list
-            Application.PrintPlayerLottoList();
+            Application.printPlayerLottoList();
 
             // input winning lotto
             Input.inputWinningLottoNumber();
@@ -23,7 +23,7 @@ public class Application {
             LottoAwardDecider lottoAwardDecider = new LottoAwardDecider();
             LottoAward lottoAward = lottoAwardDecider.decideAward(
                     winningLotto,
-                    Application.PlayerLottoList
+                    Application.playerLottoList
             );
 
             // print award and profit rate
@@ -34,8 +34,8 @@ public class Application {
         }
     }
 
-    public static void PrintPlayerLottoList() {
-        for(Lotto lotto : Application.PlayerLottoList) {
+    public static void printPlayerLottoList() {
+        for(Lotto lotto : Application.playerLottoList) {
             System.out.println(lotto);
         }
     }
