@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class LottoAward {
     private final HashMap<Award, Integer> awardHashMap;
+    private int gameCount = 0;
 
     public LottoAward() {
         awardHashMap = new HashMap<>();
@@ -16,6 +17,7 @@ public class LottoAward {
         Award award = getAwardByScore(lottoScore);
         int count = awardHashMap.get(award);
         awardHashMap.replace(award, count + 1);
+        gameCount++;
     }
 
     private Award getAwardByScore(LottoScore lottoScore) {
@@ -37,7 +39,11 @@ public class LottoAward {
         return Award.Score3;
     }
 
-    public HashMap<Award, Integer> getAward() {
-        return new HashMap<>(this.awardHashMap);
+    public Integer getAwardCount(Award award) {
+        return awardHashMap.get(award);
+    }
+
+    public int getGameCount() {
+        return gameCount;
     }
 }
