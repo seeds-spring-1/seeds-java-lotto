@@ -1,6 +1,7 @@
 package lotto;
 
 import java.util.List;
+import java.util.Vector;
 
 public class Lotto {
     private final List<Integer> numbers;
@@ -21,6 +22,7 @@ public class Lotto {
         StringBuilder numbersString = new StringBuilder();
         numbersString.append("[");
 
+        numbers.sort(null);
         for (int i = 0; i < numbers.size(); i++) {
             numbersString.append(numbers.get(i).toString());
             if (i < numbers.size() - 1) {
@@ -30,5 +32,9 @@ public class Lotto {
 
         numbersString.append("]");
         return numbersString.toString();
+    }
+
+    public List<Integer> get() {
+        return new Vector<>(numbers);
     }
 }
