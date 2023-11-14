@@ -17,7 +17,7 @@ public class Application {
 
             // input winning lotto
             Input.inputWinningLottoNumber();
-            Lotto winningLotto = new Lotto(Input.getWinningLottoNumber());
+            Lotto winningLotto = new Lotto(Input.getWinningLottoNumbers());
 
             // decide award
             LottoAwardDecider lottoAwardDecider = new LottoAwardDecider();
