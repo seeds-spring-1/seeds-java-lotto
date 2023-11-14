@@ -4,32 +4,25 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
+import camp.nextstep.edu.missionutils.Console;
+
 public class Input {
-    private static Scanner Scanner;
     private static List<Integer> winningLottoNumbers;
     private static int playerCash;
 
     public static void inputPlayerCash() {
-        Input.createScanner();
         System.out.println("구입금액을 입력해 주세요.");
 
-        Input.playerCash = Input.Scanner.nextInt();
+        Input.playerCash = Integer.parseInt(Console.readLine());
     }
 
     public static void inputWinningLottoNumber() {
-        Input.createScanner();
         System.out.println("당첨 번호를 입력해주세요.");
 
         Input.winningLottoNumbers = new Vector<Integer>();
-        String numbers = Input.Scanner.nextLine();
+        String numbers = Console.readLine();
         for(String ch : numbers.split(",")) {
             Input.winningLottoNumbers.add(Integer.parseInt(ch));
-        }
-    }
-
-    private static void createScanner() {
-        if(Input.Scanner == null) {
-            Input.Scanner = new Scanner(System.in);
         }
     }
 
