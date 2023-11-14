@@ -8,6 +8,7 @@ import camp.nextstep.edu.missionutils.Console;
 
 public class Input {
     private static List<Integer> winningLottoNumbers;
+    private static int specialLottoNumber;
     private static int playerCash;
 
     public static void inputPlayerCash() {
@@ -16,7 +17,7 @@ public class Input {
         Input.playerCash = Integer.parseInt(Console.readLine());
     }
 
-    public static void inputWinningLottoNumber() {
+    public static void inputWinningLottoNumberAndSpecialNumber() {
         System.out.println("당첨 번호를 입력해주세요.");
 
         Input.winningLottoNumbers = new Vector<Integer>();
@@ -24,6 +25,9 @@ public class Input {
         for(String ch : numbers.split(",")) {
             Input.winningLottoNumbers.add(Integer.parseInt(ch));
         }
+
+        System.out.println("보너스 번호를 입력해주세요.");
+        Input.specialLottoNumber = Integer.parseInt(Console.readLine());
     }
 
     public static int getPlayerCash() {
@@ -32,5 +36,9 @@ public class Input {
 
     public static List<Integer> getWinningLottoNumbers() {
         return Input.winningLottoNumbers;
+    }
+
+    public static int getSpecialLottoNumber() {
+        return Input.specialLottoNumber;
     }
 }

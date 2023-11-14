@@ -16,8 +16,8 @@ public class Application {
             Application.printPlayerLottoList();
 
             // input winning lotto
-            Input.inputWinningLottoNumber();
-            Lotto winningLotto = new Lotto(Input.getWinningLottoNumbers());
+            Input.inputWinningLottoNumberAndSpecialNumber();
+            WinningLotto winningLotto = new WinningLotto(Input.getWinningLottoNumbers(), Input.getSpecialLottoNumber());
 
             // decide award
             LottoAwardDecider lottoAwardDecider = new LottoAwardDecider();
