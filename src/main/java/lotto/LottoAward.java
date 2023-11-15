@@ -34,7 +34,10 @@ public class LottoAward {
         if (score == 4) {
             return Award.Score4;
         }
-        return Award.Score3;
+        if (score == 3) {
+            return Award.Score3;
+        }
+        return Award.None;
     }
 
     public Integer getAwardCount(Award award) {
