@@ -1,8 +1,6 @@
 package lotto;
 
-import java.util.List;
-import java.util.Scanner;
-import java.util.Vector;
+import java.util.*;
 
 import camp.nextstep.edu.missionutils.Console;
 
@@ -20,10 +18,14 @@ public class Input {
     public static void inputWinningLottoNumberAndSpecialNumber() {
         System.out.println("당첨 번호를 입력해주세요.");
 
-        Input.winningLottoNumbers = new Vector<Integer>();
-        String numbers = Console.readLine();
-        for(String ch : numbers.split(",")) {
-            Input.winningLottoNumbers.add(Integer.parseInt(ch));
+        Input.winningLottoNumbers = new ArrayList<>();
+        String[] numbers = Console.readLine().split(",");
+
+        // sort string. this means lotto number also sorted.
+        Arrays.sort(numbers);
+
+        for(String number : numbers) {
+            Input.winningLottoNumbers.add(Integer.parseInt(number));
         }
 
         System.out.println("보너스 번호를 입력해주세요.");
