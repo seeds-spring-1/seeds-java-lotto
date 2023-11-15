@@ -46,7 +46,7 @@ public class LottoAwardPresenter {
         awardTupleList.add(new AwardTuple(Award.Score6, 2000000000, "6개 일치 (2,000,000,000원)"));
     }
 
-    public void printAwardAndProfitRate(LottoAward lottoAward) {
+    public void printAwardAndProfitRate(LottoAward lottoAward, int playerCash) {
         long reward = 0;
 
         for (AwardTuple tuple : awardTupleList) {
@@ -54,7 +54,7 @@ public class LottoAwardPresenter {
             reward += tuple.getReward();
         }
 
-        double profitRate = (double) reward / lottoAward.getGameCount();
+        double profitRate = (double) reward / playerCash;
 
         System.out.printf("총 수익률은 %.1f%%입니다.", profitRate);
     }

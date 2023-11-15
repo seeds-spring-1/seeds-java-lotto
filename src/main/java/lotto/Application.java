@@ -28,7 +28,7 @@ public class Application {
 
             // print award and profit rate
             LottoAwardPresenter lottoAwardPresenter = new LottoAwardPresenter();
-            lottoAwardPresenter.printAwardAndProfitRate(lottoAward);
+            lottoAwardPresenter.printAwardAndProfitRate(lottoAward, Input.getPlayerCash());
         }
         catch(IllegalArgumentException exception) {
             System.out.println("[ERROR] 로또 번호는 1부터 45사이의 숫자여야 합니다.");
