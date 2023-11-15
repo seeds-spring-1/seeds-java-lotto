@@ -1,3 +1,8 @@
+/**
+ * 플레이어의 로또 번호들과 당첨 번호를 비교한 결과를 종합하여
+ * LottoAward 타입으로 반환하는 책임을 갖는다.
+ */
+
 package lotto;
 
 import java.util.List;

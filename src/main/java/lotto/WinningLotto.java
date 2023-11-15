@@ -1,3 +1,7 @@
+/**
+ * 로또 당첨 번호를 의미한다.
+ */
+
 package lotto;
 
 import java.util.List;

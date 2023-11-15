@@ -1,3 +1,7 @@
+/**
+ * 플레이어의 돈, 당첨 번호와 보너스 번호를 입력받는 책임을 갖는다.
+ */
+
 package lotto;
 
 import java.util.*;

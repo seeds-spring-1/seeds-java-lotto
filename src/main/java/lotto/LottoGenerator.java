@@ -1,5 +1,9 @@
-package lotto;
+/**
+ * 주어진 돈에 따라 랜덤한 로또 번호를 가진
+ * Lotto 클래스의 인스턴스를 생성해 반환하는 책임을 갖는다.
+ */
 
+package lotto;
 
 import java.util.List;
 import java.util.Vector;

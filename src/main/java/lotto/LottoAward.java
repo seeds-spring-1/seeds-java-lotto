@@ -1,3 +1,7 @@
+/**
+ * 로또 번호가 일치하는 개수에 따라 순위를 저장하는 클래스다. 
+ */
+
 package lotto;
 
 import java.util.HashMap;

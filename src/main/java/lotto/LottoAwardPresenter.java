@@ -1,3 +1,7 @@
+/**
+ * LottoAward 인스턴스와 수익률을 형식에 맞게 화면에 출력하는 책임을 갖는다.
+ */
+
 package lotto;
 
 import java.util.ArrayList;

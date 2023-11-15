@@ -1,3 +1,7 @@
+/**
+ * 로또 당첨 순위를 의미하는 enum이다.
+ */
+
 package lotto;
 
 public enum Award {
