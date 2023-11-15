@@ -31,10 +31,10 @@ public class LottoAwardPresenter {
 
     public LottoAwardPresenter() {
         awardTupleList = new ArrayList<>();
-        createAwardString();
+        addAwardTuplesToList();
     }
 
-    private void createAwardString() {
+    private void addAwardTuplesToList() {
         awardTupleList.add(new AwardTuple(Award.Score3, 5000, "3개 일치 (5,000원)"));
         awardTupleList.add(new AwardTuple(Award.Score4, 50000, "4개 일치 (50,000원)"));
         awardTupleList.add(new AwardTuple(Award.Score5, 1500000, "5개 일치 (1,500,000원)"));
