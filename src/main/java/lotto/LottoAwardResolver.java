@@ -2,10 +2,10 @@ package lotto;
 
 import java.util.List;
 
-public class LottoAwardDecider {
+public class LottoAwardResolver {
     private LottoScore lottoScore;
 
-    public LottoAwardDecider() {
+    public LottoAwardResolver() {
     }
 
     public LottoAward decideAward(WinningLotto winningLotto, List<Lotto> playerLottoList) {

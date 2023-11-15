@@ -20,7 +20,7 @@ public class Application {
             WinningLotto winningLotto = new WinningLotto(Input.getWinningLottoNumbers(), Input.getSpecialLottoNumber());
 
             // decide award
-            LottoAwardDecider lottoAwardDecider = new LottoAwardDecider();
+            LottoAwardResolver lottoAwardDecider = new LottoAwardResolver();
             LottoAward lottoAward = lottoAwardDecider.decideAward(
                     winningLotto,
                     Application.playerLottoList
