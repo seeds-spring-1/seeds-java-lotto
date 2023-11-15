@@ -24,7 +24,7 @@ public class Input {
         // sort string. this means lotto number also sorted.
         Arrays.sort(numbers);
 
-        for(String number : numbers) {
+        for (String number : numbers) {
             Input.winningLottoNumbers.add(Integer.parseInt(number));
         }
 

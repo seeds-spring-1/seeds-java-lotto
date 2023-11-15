@@ -23,8 +23,8 @@ public class Lotto {
 
     private void validateDuplicatedNumbers(List<Integer> numbers) {
         HashSet<Integer> hashSet = new HashSet<>();
-        for(Integer number : numbers) {
-            if(hashSet.contains(number)) {
+        for (Integer number : numbers) {
+            if (hashSet.contains(number)) {
                 throw new IllegalArgumentException();
             }
             hashSet.add(number);
