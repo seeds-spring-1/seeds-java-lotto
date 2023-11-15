@@ -1,6 +1,7 @@
 package lotto;
 
 import java.util.List;
+import java.util.ListIterator;
 
 public class LottoAwardResolver {
     private LottoScore lottoScore;
@@ -25,17 +26,10 @@ public class LottoAwardResolver {
     public void checkPlayerLottoScoreByWinningLotto(Lotto playerLotto, WinningLotto winningLotto) {
         lottoScore = new LottoScore();
 
-        for (Integer number : playerLotto.get()) {
-            boolean isEqualNumberExist = false;
-
-            for (Integer winningNumber : winningLotto.get()) {
-                if (number.equals(winningNumber)) {
-                    isEqualNumberExist = true;
-                    break;
-                }
-            }
-
-            if (isEqualNumberExist) {
+        ListIterator<Integer> iter = playerLotto.getListIterator();
+        while (iter.hasNext()) {
+            Integer number = iter.next();
+            if (winningLotto.hasNumber(number)) {
                 lottoScore.increaseScore();
             }
 

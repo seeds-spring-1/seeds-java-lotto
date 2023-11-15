@@ -1,8 +1,6 @@
 package lotto;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 public class Lotto {
     private final List<Integer> numbers;
@@ -49,7 +47,7 @@ public class Lotto {
         return numbersString.toString();
     }
 
-    public List<Integer> get() {
-        return new Vector<>(numbers);
+    public ListIterator<Integer> getListIterator() {
+        return numbers.listIterator();
     }
 }
