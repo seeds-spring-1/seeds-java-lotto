@@ -51,10 +51,10 @@ public class LottoAwardPresenter {
 
         for (AwardTuple tuple : awardTupleList) {
             System.out.printf("%s - %d개\n", tuple.getPresentString(), lottoAward.getAwardCount(tuple.getAward()));
-            reward += tuple.getReward();
+            reward += (long) lottoAward.getAwardCount(tuple.getAward()) * tuple.getReward();
         }
 
-        double profitRate = (double) reward / playerCash;
+        double profitRate = (double) reward / playerCash * 100;
 
         System.out.printf("총 수익률은 %.1f%%입니다.", profitRate);
     }
