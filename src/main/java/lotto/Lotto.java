@@ -1,5 +1,6 @@
 package lotto;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Vector;
 
@@ -12,8 +13,23 @@ public class Lotto {
     }
 
     private void validate(List<Integer> numbers) {
+        validateNumbersSize(numbers);
+        validateDuplicatedNumbers(numbers);
+    }
+
+    private void validateNumbersSize(List<Integer> numbers) {
         if (numbers.size() != 6) {
             throw new IllegalArgumentException();
+        }
+    }
+
+    private void validateDuplicatedNumbers(List<Integer> numbers) {
+        HashSet<Integer> hashSet = new HashSet<>();
+        for(Integer number : numbers) {
+            if(hashSet.contains(number)) {
+                throw new IllegalArgumentException();
+            }
+            hashSet.add(number);
         }
     }
 
@@ -22,7 +38,6 @@ public class Lotto {
         StringBuilder numbersString = new StringBuilder();
         numbersString.append("[");
 
-        numbers.sort(null);
         for (int i = 0; i < numbers.size(); i++) {
             numbersString.append(numbers.get(i).toString());
             if (i < numbers.size() - 1) {
