@@ -13,7 +13,7 @@ public class Application {
             Application.playerLottoList = lottoGenerator.generateRandomLottoListByCash(Input.getPlayerCash());
 
             // print player lotto list
-            Application.printPlayerLottoList();
+            Application.printPlayerCashAndLottoList(Input.getPlayerCash());
 
             // input winning lotto
             Input.inputWinningLottoNumberAndSpecialNumber();
@@ -35,7 +35,9 @@ public class Application {
         }
     }
 
-    public static void printPlayerLottoList() {
+    public static void printPlayerCashAndLottoList(int playerCash) {
+        playerCash /= 1000;
+        System.out.printf("%d개를 구매했습니다.\n", playerCash);
         for(Lotto lotto : Application.playerLottoList) {
             System.out.println(lotto);
         }
